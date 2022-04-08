@@ -109,38 +109,22 @@ router.get('/films/:filmId', function (req, res) {
 
 router.get('/missing-array', function (req, res) {
 
-    //by sir for number statrin from 1
 
-    // let total = 0;
+    let total = 0;
 
-    // let arr= [1,2,3,5,6,7]
+    let arr= [1,2,3,5,6,7]
 
-    // for (var i in arr) {
-    //     total += arr[i];
-    // }
+    for (var i in arr) {
+        total += arr[i];
+    }
 
-    // let lastDigit= arr.pop()
-    // let consecutiveSum= lastDigit * (lastDigit+1) / 2
-    // let missingNumber= consecutiveSum - total
+    let lastDigit= arr.pop()
+    let consecutiveSum= lastDigit * (lastDigit+1) / 2
+    let missingNumber= consecutiveSum - total
 
-    // res.send(  { data: missingNumber  }  );
+    res.send(  { data: missingNumber  }  );
 
-    // function missingnum() {
-        const numArr = [33, 34, 35, 36, 38, 39]
-        let missingArray = [1];
-
-        // for (let i in numArr) {
-           
-        //     let x = numArr[i] - numArr[i - 1];
-        //     let diff = 1;
-        //     while (diff < x)
-        //         missingArray.push(numArr[i - 1] + diff)
-            
-        // }
-        res.send(missingArray);
-
-    // }
-
+    
     
 
 });
