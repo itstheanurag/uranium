@@ -35,16 +35,15 @@ let players =
    router.post('/players', function (req, res) {
  
        //LOGIC WILL COME HERE
-       let data = req.body
-       console.log(data)
-       players.map ((x)=>{
+           let data = req.body
+        console.log(data)
+        players.map((x)=>{
            if (x.name == data.name){
-               if (x.dob == data.dob)
-               return res.send({error : "The Player already Exists"})
-           }
-       })
+              return  res.send({error : "The Player already Exists"})
+           }})
+           
        players.push(data)
        res.send(  { data: players , status: true }  )
-   })
+    });
   
 module.exports = router;
