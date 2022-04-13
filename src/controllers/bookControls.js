@@ -31,9 +31,8 @@ const getRandomBooks = async function(req,res){
 }
 
 const getParticularBooks = async function(req, res){
-    let name = req.query.authorName
-    let year = req.query.year
-    let bookData = await bookModel.find({$or : [{authorName : name},{year : year}]})
+    let condition = req.body
+    let bookData = await bookModel.find(condition)
     res.send({msg : bookData})
 }
 
